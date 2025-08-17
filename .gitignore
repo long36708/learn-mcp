@@ -1,0 +1,18 @@
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+cache/
+node_modules
+docs/.vitepress/cache
+/.eslintcache
+/docs/vite.config.ts.*.mjs
+
+pnpm-lock.yaml
+/.changeset/pre.json
+/docs/.vitepress/dist/**
+/docs/.vitepress/.temp/**
