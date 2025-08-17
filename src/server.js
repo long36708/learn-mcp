@@ -19,7 +19,7 @@ const sessions = {}
 function createMcpServer() {
 	const server = new McpServer({
 		name: 'example-server',
-		version: '0.0.1',
+		version: '1.0.0',
 		capabilities: {
 			tools: {listChanged: true},
 			resources: {listChanged: true},
@@ -27,9 +27,10 @@ function createMcpServer() {
 		}
 	})
 
-	// 静态资源 cpnfig：//app
+	// 静态资源 config://app
 	server.resource(
-		'config', 'config://app',
+		'config',
+		'config://app',
 		async (uri) => {
 			return {
 				contents: [
@@ -38,7 +39,7 @@ function createMcpServer() {
 			}
 		})
 
-	// 动态资源 users：//{userId}/profile
+	// 动态资源 users://{userId}/profile
 	server.resource(
 		'user-profile',
 		new ResourceTemplate('users://{userId}/profile', {list: undefined}),
@@ -89,7 +90,7 @@ function createMcpServer() {
 }
 
 
-app.post('mcp', async (req, res) => {
+app.post('/mcp', async (req, res) => {
 	const sessionIdHeader = req.headers['mcp-session-id'];
 
 	let sessionEntry = null;

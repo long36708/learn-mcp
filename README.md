@@ -12,7 +12,7 @@ curl -i -X POST http://localhost:8888/mcp \
   "params": {
    "protocolVersion": "2024-11-05",
    "capabilities": { "interactive": true },
-   "clientInfo": { "name": "example-client", "version": "0.0.1" }
+   "clientInfo": { "name": "example-client", "version": "1.0.0" }
   }
  }'
 ```
