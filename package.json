@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node src/server.js"
+    "test": "node src/server.js",
+    "test:demo": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,9 @@
     "@modelcontextprotocol/sdk": "^1.17.3",
     "express": "^5.1.0",
     "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.2.1",
+    "eslint": "^9.33.0"
   }
 }
